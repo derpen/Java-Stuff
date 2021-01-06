@@ -13,7 +13,6 @@ class Calc{
 		month = input.nextLine();
 		System.out.println("Input your year (ex : 2005)");
 		year = input.nextLine();
-		System.out.println("Your Birthdate is " + date + "/" + month + "/" + year);
 		
 		//this code sucks and i wanna die
 		long timeInMillis;
@@ -25,6 +24,7 @@ class Calc{
 			Date calen = sdf.parse(myDate);
 			timeInMillis = calen.getTime();
 			YourTime = Start - timeInMillis;
+			System.out.println("Your age is " + (YourTime/31556952000L));
 			System.out.println("In seconds, its " + (YourTime/1000));
 		} catch (ParseException e){
 			e.printStackTrace();
